@@ -42,7 +42,11 @@
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Project</button>
             </div>
             <div class="card m-3 col-7">
-                <p>test2</p>
+                <div class="d-inline bg-dark">
+                    <p class="d-inline text-light">Type</p>
+                    <p class="d-inline text-light">Name</p>
+                    <p class="d-inline text-light">Date</p>
+                </div>
             </div>
         </section>
 
@@ -53,23 +57,29 @@
                   <h5 class="modal-title" id="exampleModalLabel">Add a New Project</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+
                 <form>
                     <div class="form-group m-3">
-                        <input type="text" class="form-control"  placeholder="Project's Name">
+                        <input type="text" class="form-control" id="project-name" name="data" placeholder="Project's Name">
                     </div>
 
                     <div class="form-group m-3">
-                        <label for="project-type">Project Type:</label>
-                        <select name="project-type" id="project" class="w-100">
+                        <label for="select-project-type">Project Type:</label>
+                        <select name="select-project-type" id="project-type" class="w-100">
                             <option value="html">HTML</option>
                             <option value="css">CSS</option>
                             <option value="javascript">JavaScript</option>
                         </select>
                     </div>
 
+                    <div class="form-group m-3">
+                        <label for="date-picker">Due Date:</label>
+                        <input type="date" name="date-picker" id="" class="w-100">
+                    </div>
+
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Add Project</button>
+                      <button type="button" class="btn btn-primary" id="btn-add-project">Add Project</button>
                     </div>
                 </form>
               </div>
